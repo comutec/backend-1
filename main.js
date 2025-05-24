@@ -28,3 +28,6 @@ const obj = {
 console.log(obj.name);
 console.log(obj.age);
 obj.greet();
+
+const arr = [1, 2, 3, 4, 5];
+console.log(arr[0]);
