@@ -14,3 +14,18 @@
 //     ...
 //   ]
 // Tip: Usa const randomString = Math.random().toString(36).slice(2);
+
+import { writeFileSync } from "node:fs";
+
+const items = [];
+
+for (let i = 1; i <= 10; i++) {
+  const randomString = Math.random().toString(36).slice(2);
+  items.push({
+    id: i,
+    text: randomString,
+  });
+}
+
+const jsonData = JSON.stringify({ items }, null, 2);
+writeFileSync("./fixtures/items.json", jsonData, "utf-8");
